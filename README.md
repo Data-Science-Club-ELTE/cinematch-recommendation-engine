@@ -1,44 +1,48 @@
-# Data Science Club Project Template
-
-> [!IMPORTANT]
-> We ask **Project Leaders** to replace these blocks marked as `Important` with the actual project details.
+# CineMatch
 
 ## Brief project description
 
-> [!IMPORTANT]
-> 1-3 sentences about the project. This shall be a high-level overview with little to no technical details.
+`CineMatch` helps people find movies and TV shows they are likely to enjoy. Instead of only showing what is popular, it tries to learn what each person might like and suggests better matches. The goal is to make choosing what to watch faster, easier, and less stressful.
 
 ## Team
 
-> [!IMPORTANT]
-> Please fill out the following table with the name and expected responsibilities of each team member.
+| Name                | Expected responsibilities |
+| :------------------ | :------------------------ |
+| Teerath Kumar       | Co-Lead                   |
+| Akpaeva Madina      | Team Member               |
+| Enemuo Ivan Tadinma | Team Member               |
+| Samsiani Elene      | Team Member               |
 
-|               | Expected responsibilities |
-| :------------ | :------------------------ |
-| Team member 1 | Team Leader, etc.         |
-| Team member 2 | Data Modeling, etc.       |
-| $\vdots$      | $\vdots$                  |
-| Team member N | Data Visualization, etc.  |
+## The _Problem_ behind the project
 
-## The *Problem* behind the project
-
-> [!IMPORTANT]
-> If you have already outlined the problem that your project is trying to create a solution for, then please introduce it briefly. Otherwise, replace it later.
+Users face decision fatigue because there are too many entertainment options and not enough meaningful personalization. Many recommendation systems over-prioritize popularity and fail to adapt to user-specific taste, recency, and diversity. CineMatch addresses this by building a hybrid recommender that can move beyond "most popular" outputs and support richer discovery for both users and creators.
 
 ## Challenges
 
-> [!IMPORTANT]
-> Here you may list challenges that make the project idea / problem less straightforward from a *Data Science* point of view.
+- Integrating heterogeneous data sources (TMDB metadata + MovieLens interactions) into a consistent schema.
+- Handling cold-start scenarios for new users and newly added content.
+- Balancing accuracy with diversity, novelty, and fairness in ranked recommendations.
+- Building explainable recommendation logic users can trust.
+- Designing for production constraints: scalable APIs, vector search efficiency, and retraining workflows.
 
 ## Expectations
 
-> [!IMPORTANT]
-> If you have an expectation about the outcomes of your project, then please outline it briefly. Otherwise, leave it unchanged.
+We expect CineMatch to deliver stronger recommendation quality than simple popularity baselines through a hybrid ranking approach that combines collaborative filtering, embedding similarity, popularity adjustment, and recency weighting. We also expect measurable improvements in ranking quality and discovery quality, tracked through `Hit Rate@K`, `Recall@K`, `NDCG@K`, diversity, and novelty metrics. Over time, the system should support real-user interaction feedback and periodic model retraining.
 
 ## Tools & Technologies
 
-> [!IMPORTANT]
-> Please list the tools that you expect to work with in the project. (e.g.: `Python`, `R`, `NumPy`, `Pandas`, `Matplotlib`, etc.)
+- `Python`
+- `FastAPI`
+- `PostgreSQL`
+- `FAISS`
+- `Streamlit` (prototype UI)
+- `React` (advanced UI phase)
+- `Docker`
+- `TMDB API`
+- `MovieLens dataset`
+- `Sentence Transformers` (content embeddings)
+- `ALS` matrix factorization
+- `LightGBM` / `XGBoost` (learning-to-rank)
 
 ## How to run the Project
 
@@ -50,3 +54,8 @@
 > [!CAUTION]
 > This section is reserved for discussing the project results at the **end of the semester**.
 
+At this stage, final semester results are pending. The project will report outcomes at the end of the semester using:
+
+- Recommendation quality: `Hit Rate@K`, `Recall@K`, `NDCG@K`
+- Discovery quality: diversity and novelty metrics
+- System readiness milestones aligned with the project roadmap (prototype -> hybrid model -> deployment -> retraining loop)
